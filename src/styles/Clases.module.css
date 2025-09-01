@@ -1,28 +1,28 @@
-.tablaClases {
+.tablaHorizontal {
   width: 100%;
-  border-collapse: separate;
-  border-spacing: 0;
-  margin-top: 2rem;
-  font-family: 'Segoe UI', sans-serif;
-  font-size: 1rem;
-  border-radius: 8px;
-  overflow: hidden;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.05);
+  border-collapse: collapse;
+  text-align: center;
 }
 
-.tablaClases thead {
-  background-color: #e0f7fa;
-  color: #333;
-  text-align: left;
+.tablaHorizontal th {
+  background-color: #26a69a;
+  color: white;
+  padding: 1rem;
+  font-weight: 600;
 }
 
-.tablaClases th,
-.tablaClases td {
-  padding: 0.75rem 1rem;
-  border-bottom: 1px solid #ddd;
+.tablaHorizontal td {
+  padding: 1rem;
+  vertical-align: top;
+  border: 1px solid #ddd;
+  min-width: 120px;
 }
 
-.tablaClases tbody tr:hover {
-  background-color: #f9f9f9;
-  transition: background-color 0.3s ease;
+.claseItem {
+  margin-bottom: 1rem;
+}
+
+.sinClase {
+  color: #aaa;
+  font-style: italic;
 }

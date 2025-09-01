@@ -16,10 +16,9 @@ const Home = () => {
         <p>Consultá los horarios disponibles. Para reservar, iniciá sesión.</p>
       </section>
 
-      {/* Presentación */}
+      {/* Presentación de Clases */}
       <section className={styles.presentacion}>
         <Clases />
-       
       </section>
 
       </div>
