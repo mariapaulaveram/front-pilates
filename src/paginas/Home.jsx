@@ -1,14 +1,14 @@
 import { useState } from "react";
+import useScrollToHash from "../hooks/useScrollToHash";
 import styles from "../styles/Home.module.css";
 import HomeCarousel from '../componentes/HomeCarousel';
 import Clases from "../componentes/Clases";
 
 const Home = () => {
-  
+  useScrollToHash();
   return (
     <main id="home">
       {/* Hero Section */}
-       {/* <HomeCarousel />*/}
       <div id="pilates-home" className={styles.home}>
       <section className={styles.hero}>
         <HomeCarousel />
@@ -17,7 +17,7 @@ const Home = () => {
       </section>
 
       {/* Presentación de Clases */}
-      <section className={styles.presentacion}>
+      <section id="horarios" className={styles.presentacion}>
         <Clases />
       </section>
 

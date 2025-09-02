@@ -12,7 +12,7 @@ function Navbar() {
           <h2 className={styles.logoTitle}>Pilates Studio</h2>
         </div>
         <ul className={styles.links}>
-          <li><Link to="/">Inicio</Link></li>
+          <li><Link to="/#pilates-home">Inicio</Link></li>
           <li><Link to="/login">Login</Link></li>
           <li><Link to="/registro">Registrarse</Link></li>
           <li><Link to="/#horarios">Horarios</Link></li>

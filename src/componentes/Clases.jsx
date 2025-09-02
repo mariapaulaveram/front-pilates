@@ -22,7 +22,7 @@ const Clases = () => {
         cargarClases();
     }, []);
      
-   const dias = ['lunes', 'martes', 'miércoles', 'jueves', 'viernes', 'sábado', 'domingo'];
+   const dias = ['lunes', 'martes', 'miercoles', 'jueves', 'viernes', 'sabado'];
 
 return (
   <section className={styles.holder}>
@@ -70,40 +70,3 @@ return (
 };
 
 export default Clases;
-
-    /*return (
-        <section className={styles.holder}>
-            <div className={styles.tituloWrapper}>
-                <h2 className={styles.tituloInstitucional}>Horarios de Clases</h2>
-
-            </div>
-            {loading ? (
-                <p className={styles.loading}>Cargando...</p>
-            ) : (
-                <div className={styles.flexContainer}>
-                    <table className={styles.tablaClases}>
-                        <thead>
-                            <tr>
-                                <th>Día</th>
-                                <th>Hora</th>
-                                <th>Profesor</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            {clases.map((item, index) => (
-                                <tr key={item.id || index}>
-                                    <td>{item.dia}</td>
-                                    <td>{item.hora}</td>
-                                    <td>{item.profesor}</td>
-                                </tr>
-                            ))}
-                        </tbody>
-                    </table>
-
-                </div>
-            )}
-        </section>
-    );
-};
-
-export default Clases;*/
