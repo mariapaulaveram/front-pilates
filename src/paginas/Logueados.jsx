@@ -1,14 +1,15 @@
 import {useLocation, useNavigate } from 'react-router-dom';
 import styles from '../styles/Logueados.module.css';
+import ClasesDisponibles from '../componentes/ClasesDisponibles';
 
 function Logueados() {
-  const location = useLocation();
-  const navigate = useNavigate();
-  const email = location.state?.email || 'usuario desconocido';
+    const location = useLocation();
+    const navigate = useNavigate();
+    const email = location.state?.email || 'usuario desconocido';
 
-  const handleLogout = () => {
-    navigate('/login');
-  };
+    const handleLogout = () => {
+        navigate('/login');
+    };
 
     return (
         <div className={styles.wrapper}>
@@ -18,8 +19,13 @@ function Logueados() {
                     Cerrar sesión
                 </button>
             </div>
+            <div>
+                {/* Presentación de Clases Disponibles */}
+                <section id="horarios" className={styles.presentacion}>
+                    <ClasesDisponibles />
+                </section>
+            </div>
         </div>
-
     );
 }
 

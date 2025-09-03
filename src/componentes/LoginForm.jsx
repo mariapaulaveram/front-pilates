@@ -15,8 +15,9 @@ function LoginAlumnos() {
             const response = await axios.post('http://localhost:3000/api/alumnos', { email, password });
 
             if (response.status === 200) {
-                // Login exitoso
-                navigate('/logueados', { state: { email } });
+                const id_alumno = response.data.alumno.id; // suponiendo que el backend devuelve { alumno: { id, email, ... } }
+                localStorage.setItem("id_alumno", id_alumno);
+                navigate("/logueados", { state: { email } });
 
             } else {
                 // Login fallido
