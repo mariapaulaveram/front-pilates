@@ -1,4 +1,3 @@
-import { useState } from "react";
 import useScrollToHash from "../hooks/useScrollToHash";
 import styles from "../styles/Home.module.css";
 import HomeCarousel from '../componentes/HomeCarousel';

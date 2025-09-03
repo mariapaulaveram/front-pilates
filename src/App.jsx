@@ -3,6 +3,9 @@ import { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 import Layout from './componentes/layouts/Layout';
+import Logueados from './paginas/Logueados';
+import Login from './paginas/Login';
+import Registro from './paginas/Registro';
 import Home from './paginas/Home';
 
 
@@ -22,6 +25,9 @@ function App() {
       <Routes>
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
+          <Route path="logueados" element={<Logueados />} />
+          <Route path="login" element={<Login />} />
+          <Route path="registro" element={<Registro />}/>
         </Route>
       </Routes>
     </Router>

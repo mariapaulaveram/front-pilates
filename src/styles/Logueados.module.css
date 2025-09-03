@@ -1,0 +1,32 @@
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f8f9fa; /* similar a bg-light */
+}
+
+.card {
+  padding: 2rem;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  text-align: center;
+  background-color: white;
+  border-radius: 8px;
+  max-width: 400px;
+  width: 100%;
+}
+
+.title {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.button {
+  background-color: #6c757d; /* similar a btn-secondary */
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
