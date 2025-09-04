@@ -1,32 +1,45 @@
+/* Contenedor general */
 .wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: #f9f9f9;
+  padding-top: 140px; /* espacio para navbar fija */
+}
+
+/* Saludo alineado a la derecha */
+.saludoContainer {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0.5rem 1.5rem;
+  gap: 1rem;
+  font-size: 1rem;
+  color: #2c2e2e;
+  font-weight: 400;
+}
+
+/* Botón estilo link */
+.logout {
+  background: none;
+  border: none;
+  color: #555;
+  font-size: 0.95rem;
+  cursor: pointer;
+  text-decoration: none;
+  padding: 0;
+}
+
+.logout:hover {
+  color: #0c0c0c;
+}
+
+/* Sección de clases disponibles centrada */
+.presentacion {
+  flex-grow: 1;
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 100vh;
-  background-color: #f8f9fa; /* similar a bg-light */
-}
-
-.card {
-  padding: 2rem;
-  box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  text-align: center;
-  background-color: white;
-  border-radius: 8px;
-  max-width: 400px;
-  width: 100%;
-}
-
-.title {
-  margin-bottom: 1rem;
-  color: #333;
-}
-
-.button {
-  background-color: #6c757d; /* similar a btn-secondary */
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  cursor: pointer;
+  padding: 2rem 1rem;
 }
 

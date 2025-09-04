@@ -13,18 +13,15 @@ function Logueados() {
 
     return (
         <div className={styles.wrapper}>
-            <div className={styles.card}>
-                <h2 className={styles.title}>¡Bienvenido, {email}!</h2>
-                <button onClick={handleLogout} className={styles.button}>
+            <div className={styles.saludoContainer}>
+                <span className={styles.saludo}>¡Bienvenido, {email}!</span>
+                <button onClick={handleLogout} className={styles.logout}>
                     Cerrar sesión
                 </button>
             </div>
-            <div>
-                {/* Presentación de Clases Disponibles */}
-                <section id="horarios" className={styles.presentacion}>
-                    <ClasesDisponibles />
-                </section>
-            </div>
+            <section id="horarios" className={styles.presentacion}>
+                <ClasesDisponibles />
+            </section>
         </div>
     );
 }

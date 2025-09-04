@@ -11,9 +11,7 @@ const Registro = () => {
         <RegistroForm/>
       </section>
 
-      {/* Presentación de Clases */}
-      
-
+    
       </div>
     </main>
   );

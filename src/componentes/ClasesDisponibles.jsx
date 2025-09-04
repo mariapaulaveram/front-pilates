@@ -16,7 +16,7 @@ const ClasesDisponibles = () => {
   }, []);
 
   const inscribirse = async (idClase) => {
-  const id_alumno = localStorage.getItem("id_alumno"); // 👈 moverlo acá
+  const id_alumno = localStorage.getItem("id_alumno"); 
   if (!id_alumno) {
     alert("No se encontró el ID del alumno. Iniciá sesión nuevamente.");
     return;

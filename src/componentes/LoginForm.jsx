@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import axios from 'axios';
+import styles from "../styles/LoginForm.module.css";
 
 function LoginAlumnos() {
     const [email, setEmail] = useState('');
@@ -15,12 +16,10 @@ function LoginAlumnos() {
             const response = await axios.post('http://localhost:3000/api/alumnos', { email, password });
 
             if (response.status === 200) {
-                const id_alumno = response.data.alumno.id; // suponiendo que el backend devuelve { alumno: { id, email, ... } }
+                const id_alumno = response.data.alumno.id;
                 localStorage.setItem("id_alumno", id_alumno);
                 navigate("/logueados", { state: { email } });
-
             } else {
-                // Login fallido
                 setErrorMessage(response.data.message || 'Credenciales incorrectas');
             }
         } catch (error) {
@@ -30,35 +29,35 @@ function LoginAlumnos() {
     };
 
     return (
-        <div className="d-flex justify-content-center align-items-center vh-100 bg-light">
-            <div className="card shadow-sm p-4" style={{ maxWidth: '400px', width: '100%' }}>
-                <h2 className="text-center text-muted mb-4">Bienvenida a Pilates</h2>
+        <div className={styles.container}>
+            <div className={styles.card}>
+                <h2 className={styles.title}>Bienvenida a Pilates</h2>
                 <form onSubmit={handleSubmit}>
-                    <div className="mb-3">
-                        <label htmlFor="email" className="form-label">Usuario</label>
+                    <div className={styles.formGroup}>
+                        <label htmlFor="email" className={styles.label}>Usuario</label>
                         <input
                             type="text"
                             id="email"
                             value={email}
                             onChange={(e) => setEmail(e.target.value)}
-                            className="form-control"
+                            className={styles.input}
                             placeholder="Ingresá tu usuario"
                         />
                     </div>
-                    <div className="mb-3">
-                        <label htmlFor="password" className="form-label">Contraseña</label>
+                    <div className={styles.formGroup}>
+                        <label htmlFor="password" className={styles.label}>Contraseña</label>
                         <input
                             type="password"
                             id="password"
                             value={password}
                             onChange={(e) => setPassword(e.target.value)}
-                            className="form-control"
+                            className={styles.input}
                             placeholder="••••••••"
                         />
                     </div>
-                    <button type="submit" className="btn btn-primary w-100">Iniciar sesión</button>
+                    <button type="submit" className={styles.button}>Iniciar sesión</button>
                     {errorMessage && (
-                        <div className="alert alert-danger mt-3 text-center" role="alert">
+                        <div className={styles.errorMessage}>
                             {errorMessage}
                         </div>
                     )}
@@ -69,3 +68,4 @@ function LoginAlumnos() {
 }
 
 export default LoginAlumnos;
+
