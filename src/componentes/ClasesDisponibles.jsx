@@ -92,3 +92,4 @@ const ClasesDisponibles = () => {
 };
 
 export default ClasesDisponibles;
+

@@ -7,7 +7,6 @@ const Registro = () => {
       {/* Hero Section */}
       <div id="pilates-home" className={styles.login}>
       <section className={styles.hero}>
-        <h1>Bienvenidos a Pilates Studio</h1>
         <RegistroForm/>
       </section>
 

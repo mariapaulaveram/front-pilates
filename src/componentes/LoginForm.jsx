@@ -31,7 +31,7 @@ function LoginAlumnos() {
     return (
         <div className={styles.container}>
             <div className={styles.card}>
-                <h2 className={styles.title}>Bienvenida a Pilates</h2>
+                <h2 className={styles.title}>Ingreso Alumnos</h2>
                 <form onSubmit={handleSubmit}>
                     <div className={styles.formGroup}>
                         <label htmlFor="email" className={styles.label}>Usuario</label>
