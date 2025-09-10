@@ -2,6 +2,7 @@ import {useLocation, useNavigate } from 'react-router-dom';
 import styles from '../styles/Logueados.module.css';
 import ClasesDisponibles from '../componentes/ClasesDisponibles';
 
+
 function Logueados() {
     const location = useLocation();
     const navigate = useNavigate();
