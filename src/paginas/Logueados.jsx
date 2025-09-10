@@ -1,6 +1,6 @@
 import {useLocation, useNavigate } from 'react-router-dom';
 import styles from '../styles/Logueados.module.css';
-import ClasesDisponibles from '../componentes/ClasesDisponibles';
+import ClasesDisponiblesHoy from '../componentes/ClasesDisponiblesHoy';
 
 
 function Logueados() {
@@ -21,7 +21,7 @@ function Logueados() {
                 </button>
             </div>
             <section id="horarios" className={styles.presentacion}>
-                <ClasesDisponibles />
+                <ClasesDisponiblesHoy />
             </section>
         </div>
     );

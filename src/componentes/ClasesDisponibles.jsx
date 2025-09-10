@@ -7,6 +7,7 @@ const ClasesDisponibles = () => {
   const [clases, setClases] = useState([]);
   const id_alumno = localStorage.getItem("id_alumno"); // guardado en login
 
+
   useEffect(() => {
     axios
       .get("http://localhost:3000/api/clases")
