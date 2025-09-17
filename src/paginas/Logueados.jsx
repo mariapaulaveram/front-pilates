@@ -9,7 +9,7 @@ function Logueados() {
     const email = location.state?.email || 'usuario desconocido';
 
     const handleLogout = () => {
-        navigate('/login');
+        navigate('/');
     };
 
     return (
