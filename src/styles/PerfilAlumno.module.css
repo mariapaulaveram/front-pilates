@@ -1,0 +1,44 @@
+.perfilContainer {
+  max-width: 500px;
+  margin: 150px auto; /* ⬅️ esto lo centra y baja el bloque */
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+
+.perfilContainer h2 {
+  text-align: center;
+  color: #a3066a;
+  margin-bottom: 30px;
+  font-size: 1.8rem;
+}
+
+.perfilContainer p {
+  font-size: 1.1rem;
+  margin: 12px 0;
+  color: #444;
+  line-height: 1.5;
+}
+
+.perfilContainer strong {
+  display: inline-block;
+  width: 100px;
+  color: #555;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #dc3545;
+}

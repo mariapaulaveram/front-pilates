@@ -9,7 +9,7 @@ import Registro from './paginas/Registro';
 import Home from './paginas/Home';
 import RecuperarContraseña from './componentes/RecuperarContraseña';
 import RestablecerContraseña from './componentes/RestablecerContraseña';
-
+import PerfilAlumno from './componentes/perfilAlumno';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -32,6 +32,7 @@ function App() {
           <Route path="registro" element={<Registro />}/>
           <Route path='recuperar' element={<RecuperarContraseña/>} />
           <Route path="/restablecer/:token" element={<RestablecerContraseña />} />
+          <Route path="/perfil" element={<PerfilAlumno />} />
         </Route>
       </Routes>
     </Router>

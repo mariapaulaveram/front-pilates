@@ -16,9 +16,16 @@ function LoginAlumnos() {
             const response = await axios.post('http://localhost:3000/api/alumnos', { email, password });
 
             if (response.status === 200) {
-                const id_alumno = response.data.alumno.id;
+                const alumno = response.data.alumno;
+                const id_alumno = alumno.id;
                 localStorage.setItem("id_alumno", id_alumno);
-                navigate("/logueados", { state: { email } });
+
+                navigate("/logueados", {
+                    state: {
+                        email: alumno.email,
+                        nombre: alumno.nombre
+                    }
+                });
             } else {
                 setErrorMessage(response.data.message || 'Credenciales incorrectas');
             }
