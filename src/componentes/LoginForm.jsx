@@ -56,6 +56,11 @@ function LoginAlumnos() {
                         />
                     </div>
                     <button type="submit" className={styles.button}>Iniciar sesión</button>
+
+                    <div className={styles.forgotPassword}>
+                        <a href="/recuperar">¿Olvidaste tu contraseña?</a>
+                    </div>
+
                     {errorMessage && (
                         <div className={styles.errorMessage}>
                             {errorMessage}

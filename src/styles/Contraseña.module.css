@@ -1,5 +1,5 @@
 /* Contenedor principal centrado */
-.container {
+.contraseñaContainer {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -9,7 +9,7 @@
 }
 
 /* Tarjeta del formulario */
-.card {
+.contraseñaCard {
   background-color: #ffffff;
   padding: 2rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
@@ -20,7 +20,7 @@
 }
 
 /* Título del login */
-.title {
+.contraseñaTitle {
   text-align: center;
   color: #333333;
   margin-bottom: 1.5rem;
@@ -34,7 +34,7 @@
 }
 
 /* Etiquetas */
-.label {
+.formGroup label {
   display: block;
   margin-bottom: 0.5rem;
   font-weight: 500;

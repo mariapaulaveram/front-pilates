@@ -7,6 +7,8 @@ import Logueados from './paginas/Logueados';
 import Login from './paginas/Login';
 import Registro from './paginas/Registro';
 import Home from './paginas/Home';
+import RecuperarContraseña from './componentes/RecuperarContraseña';
+import RestablecerContraseña from './componentes/RestablecerContraseña';
 
 
 function ScrollToTop() {
@@ -28,6 +30,8 @@ function App() {
           <Route path="logueados" element={<Logueados />} />
           <Route path="login" element={<Login />} />
           <Route path="registro" element={<Registro />}/>
+          <Route path='recuperar' element={<RecuperarContraseña/>} />
+          <Route path="/restablecer/:token" element={<RestablecerContraseña />} />
         </Route>
       </Routes>
     </Router>

@@ -13,7 +13,7 @@ function Logueados() {
     };
 
     return (
-        <div className={styles.wrapper}>
+        <div className={styles.wrapperSaludo}>
             <div className={styles.saludoContainer}>
                 <span className={styles.saludo}>¡Bienvenido, {email}!</span>
                 <button onClick={handleLogout} className={styles.logout}>
