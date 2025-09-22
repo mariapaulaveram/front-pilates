@@ -32,3 +32,13 @@
   background-color: #f1f1f1;
   border-radius: 6px;
 }
+
+.cancelarButton {
+  margin-left: 10px;
+  padding: 4px 8px;
+  background-color: #dc3545;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}

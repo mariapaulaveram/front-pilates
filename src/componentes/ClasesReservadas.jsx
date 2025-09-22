@@ -1,48 +1,49 @@
-import { useEffect, useState } from 'react';
-import axios from 'axios';
-import styles from '../styles/ClasesReservadas.module.css';
+import { useState, useEffect } from "react";
+import axios from "axios";
+import styles from "../styles/ClasesReservadas.module.css";
 
-function ClasesReservadas({ onClose }) {
+const ClasesReservadas = () => {
+  const [loading, setLoading] = useState(true);
   const [clases, setClases] = useState([]);
-  const [error, setError] = useState(null);
-  const id_alumno = localStorage.getItem('id_alumno');
+  const [error, setError] = useState("");
+
+  const id_alumno = parseInt(localStorage.getItem("id_alumno"), 10); // ✅ asegurate que esté acá
+  console.log("🎓 ID leído desde localStorage:", id_alumno);
 
   useEffect(() => {
-    async function fetchClases() {
-      try {
-        const response = await axios.get(`/api/reservas/${id_alumno}`);
-        console.log('Datos recibidos:', response.data);
-
-        // Asegura que siempre sea un array
-        const datos = Array.isArray(response.data)
-          ? response.data
-          : [response.data];
-
-        setClases(datos);
-      } catch (error) {
-        console.error('Error al cargar clases reservadas:', error);
-        setError('No se pudieron cargar las clases reservadas.');
-      }
+    if (!id_alumno) {
+      setError("No se encontró el alumno. Iniciá sesión nuevamente.");
+      setLoading(false);
+      return;
     }
 
-    fetchClases();
+    axios
+      .get(`http://localhost:3000/api/reservas/${id_alumno}`)
+      .then((res) => {
+        console.log("📥 Datos recibidos:", res.data);
+        setClases(Array.isArray(res.data) ? res.data : [res.data]);
+      })
+      .catch((err) => {
+        console.error(err);
+        setError(err.response?.data?.message || "Error al obtener las clases");
+      })
+      .finally(() => setLoading(false));
   }, [id_alumno]);
 
-  return (
-    <div className={styles.reservadasContainer}>
-      <div className={styles.header}>
-        <h2>Clases reservadas</h2>
-        <button className={styles.closeButton} onClick={onClose}>❌</button>
-      </div>
+  console.log("📦 Clases en el estado:", clases);
 
-      {error ? (
-        <p className={styles.error}>{error}</p>
+  return (
+    <section className={styles.holder}>
+      {loading ? (
+        <p>Cargando clases...</p>
+      ) : error ? (
+        <p>{error}</p>
       ) : clases.length === 0 ? (
         <p>No tenés clases reservadas.</p>
       ) : (
         <ul className={styles.listaClases}>
-          {clases.map((clase, index) => (
-            <li key={index} className={styles.itemClase}>
+          {clases.map((clase) => (
+            <li key={clase.id_inscripcion} className={styles.itemClase}>
               <strong>Día:</strong> {clase.dia} &nbsp;|&nbsp;
               <strong>Hora:</strong> {clase.hora} &nbsp;|&nbsp;
               <strong>Profesor:</strong> {clase.profesor}
@@ -50,8 +51,10 @@ function ClasesReservadas({ onClose }) {
           ))}
         </ul>
       )}
-    </div>
+    </section>
   );
-}
+};
 
 export default ClasesReservadas;
+
+
