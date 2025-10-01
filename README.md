@@ -151,10 +151,13 @@ Al ingresar al sitio, el alumno ve:
   - Ver horarios
 
 
-## Créditos
-Desarrollado por MPVM — 2025
-
 ## Futuras mejoras
 
 - Validación de campos más robusta en formularios
 - Visualización de cupos disponibles en cada clase
+
+
+## Licencia
+
+Este proyecto está bajo la Licencia MIT. Podés usarlo, modificarlo y distribuirlo libremente, siempre que mantengas los créditos originales.  
+Ver el archivo [LICENSE](./LICENSE) para más detalles.

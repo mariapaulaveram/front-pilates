@@ -41,7 +41,7 @@ const Footer = () => {
             </div>
 
             <div className={styles.footerBottom}>
-                <p>Pilates Front – Todos los derechos reservados ©</p>
+                <p>Pilates Front – © 2025 María Paula Vera Morandini — Licencia MIT</p>
             </div>
         </footer>
     );
